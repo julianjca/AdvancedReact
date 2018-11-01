@@ -1,13 +1,24 @@
-import Head from 'next/head';
+import Link from 'next/link';
+import NavStyles from './styles/NavStyles';
 
-const Meta = () => (
-  <Head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charSet="utf-8" />
-    <link rel="shortcut icon" href="/static/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-    <title>Sick Fits!</title>
-  </Head>
+const Nav = () => (
+  <NavStyles>
+    <Link href="/items">
+      <a>Items</a>
+    </Link>
+    <Link href="/sell">
+      <a>Sell</a>
+    </Link>
+    <Link href="/signup">
+      <a>Signup</a>
+    </Link>
+    <Link href="/orders">
+      <a>Orders</a>
+    </Link>
+    <Link href="/me">
+      <a>Account</a>
+    </Link>
+  </NavStyles>
 );
 
-export default Meta;
+export default Nav;
